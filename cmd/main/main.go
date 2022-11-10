@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -14,5 +15,6 @@ func main() {
 	routes.RegisterBookStoreRoutes(r)
 	http.Handle("/", r)
 
-	log.Fatal(http.ListenAndServe("localhost:9010", r))
+	fmt.Println("Starting server at port 9010")
+	log.Fatal(http.ListenAndServe(":9010", r))
 }
