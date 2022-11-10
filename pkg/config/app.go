@@ -23,5 +23,3 @@ func Connect() {
 func GetDB() *gorm.DB {
 	return db
 }
-
-// ALTER USER 'root'@'localhost' IDENTIFIED BY 'mysql';
